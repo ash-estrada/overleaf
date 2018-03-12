@@ -1,5 +1,123 @@
-\documentclass{article}
+% \propto
+
+\documentclass[10pt]{article}
 \usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+\usepackage[hmargin=1in,vmargin=1in]{geometry} 
 \begin{document}
-(Type your content here.)
+
+\textbf{4.3 Homogeneous Linear Equations With Constant Coefficients} \\
+
+\bigskip
+
+Definition: \\
+\smallskip
+\begin{equation}
+a_{n}\frac{d^n y}{dx^n} + a_{n-1}\frac {d^{n-1}y}{dx^{n-1}} + \cdots + a_{2}\frac{d^2y}{dx^2} + a_1\frac{dy}{dx} + a_{0}y = 0
+\label{eqn:1}
+\end{equation}
+
+\bigskip 
+
+Recall: \\
+\begin{align*}
+\frac{dy}{dx} = 2y \quad & \Leftrightarrow \int\frac{dy}{y} = 2\int{dx}\\
+& \Leftrightarrow \ln{y}\ln{c}  = 2x-\ln{c} \\ 
+& \Leftrightarrow ???? \\ 
+& \Leftrightarrow \ln{\frac{y}{c}} = 2x \\
+& \Leftrightarrow  \frac{y}{c} = e^{2x}\\ 
+& \Leftrightarrow y = ce^{2x} \\ 
+\end{align*}
+
+From this example, we can infer solutions of (1) are exponential functions. \\
+
+Now, consider \\
+
+\begin{equation}
+ay''+by'+cy = 0
+\end{equation}
+\bigskip
+
+Try a solution of the form \(y = e^{mx}\). \\
+
+\[y=e^{mx},\quad y'=me^{mx}, \quad y''=m^2e^{mx}\]
+
+\[e^{mx}(am^2+bm+c) = 0\] \\
+
+Since \(e^{m^x} \ne 0\), then \((am^2 + bm + c) = 0\), a quadratic equation in \textit{m}. \\
+
+This quadratic equation, \(am^2 + bm + c = 0\), is what we call the \textit{auxiliary equation}. Sometimes, this is called the \textit{characteristic equation}. \\
+
+Consider the following three cases: \\
+
+Case 1: Discriminant \((b^2-4ac) > 0\) \\
+
+Expect two distinct real roots or solutions. \\
+
+Example: \textit{Discuss in class.} \\
+
+Solve:
+
+\[2\frac{d^2y}{dx^2} + 11\frac{dy}{dx} + 4y = 0\]
+
+%%%%%%%%%%%%%
+% in class
+%%%%%%%%%%%%%
+
+\[m= \frac{-b\pm\sqrt{b^2-4ac}}{2a} \Rightarrow D = b^2-4ac\]
+
+% fill in with handwritten stuff
+
+Case 2: Discriminant \((b^2-4ac) = 0\) \\
+
+Expect one root with multiplicity of 2. That is, the two roots are the same, (i.e. repeated roots, e.g. \(m=m_1=m_2)\). \\
+
+Example in class. \\
+
+Solve:
+
+\[\frac{d^2y}{dx^2} - 18 \frac{dy}{dx}+ 81y = 0 \]
+
+\bigskip
+\bigskip
+\bigskip
+
+Case 3: Discriminant \((b^2-4ac) = 0\) \\
+
+Expect two distinct complex (imaginary) roots.
+\[m_1 = \alpha + i\beta \qquad m_2 = \alpha - i\beta \]
+
+\[y = c_1e^{(\alpha + i\beta)x} + c_2e^{(\alpha - i\beta)x}\] \\
+
+\(e^{i\theta} = \cos\theta + i\sin\theta\) \\
+
+\(e^{i\beta x} = \cos\beta x + i\sin\beta x\) \\
+
+\(e^{-i\beta x} = \cos\beta x - i\sin\beta x\) \\
+
+\(\cos(-\beta x) = \cos(\beta x) \) \\
+
+\(\sin(-\beta x) = -i\sin(\beta x) \)
+
+Solution Form (Always) \\
+
+\(y = e^{\alpha x}[c_1 \cos \beta x + c_2 \sin \beta x] \) \\
+
+\bigskip
+
+Example: Solve \(2\frac{d^2 y}{dx^2} + 3\frac{dy}{dx} + 13y = 0\) \\
+
+\bigskip
+
+\bigskip 
+
+Examples on: Higher-Order Linear DE with Constant Coefficients (Homogeneous) 
+
+Follow discussions in class. 
+
+
+
 \end{document}
